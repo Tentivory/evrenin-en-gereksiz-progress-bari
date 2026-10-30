@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+# Evrenin En Gereksiz Progress Bar'ı
+# Bu kodu çalıştırmak hayattaki en önemli işlemlerden biridir.
+
+import time
+import base64
+
+def gereksiz_progress():
+    print("Evrenin en önemli hesaplaması başlıyor...")
+    print("Lütfen bekleyin. Bu işlem geri alınamaz. Ya da alınabilir. Bilmiyoruz.")
+    print()
+    
+    for i in range(100, -1, -1):
+        # Çok kritik bir adım
+        print(f"İlerleme: {i}% - Bu işlem son derece kritiktir. Lütfen kapatmayın.")
+        time.sleep(0.3)
+    
+    print()
+    print("İşlem tamamlandı.")
+    print("Hiçbir şey değişmedi.")
+    print("Tebrikler! Artık daha bilgesiniz. Ya da değilsiniz.")
+    
+    # Gizli mesaj (saklı)
+    gizli = "Y29uZ3JhdHVsYXRpb25zISBZb3UgaGF2ZSBzdWNjZXNzZnVsbHkgd2FzdGVkIHlvdXIgdGltZS4="
+    try:
+        print(base64.b64decode(gizli).decode())
+    except:
+        pass
+
+if __name__ == "__main__":
+    gereksiz_progress()
