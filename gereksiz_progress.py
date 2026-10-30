@@ -20,12 +20,12 @@ def gereksiz_progress():
     print("Hiçbir şey değişmedi.")
     print("Tebrikler! Artık daha bilgesiniz. Ya da değilsiniz.")
     
-    # Gizli mesaj (saklı)
-    gizli = "Y29uZ3JhdHVsYXRpb25zISBZb3UgaGF2ZSBzdWNjZXNzZnVsbHkgd2FzdGVkIHlvdXIgdGltZS4="
-    try:
-        print(base64.b64decode(gizli).decode())
-    except:
-        pass
+    # Görünen mesaj
+    print(base64.b64decode("Q29uZ3JhdHVsYXRpb25zISBZb3UgaGF2ZSBzdWNjZXNzZnVsbHkgd2FzdGVkIHlvdXIgdGltZS4=").decode())
+
+# Saklı mesaj (hiçbir yerde çalışmaz, sadece durur)
+# base64: cG9saXRpa2FjaWxhciBwcm9ncmVzcyBiYXIgZ2liaWRpci4gçb2sgaGFyZWtldCBlZGVybGVyIGFtYSBoaWNiaXIgeWVyZSBnaXRtZXpsZXIu
+# decode: politikacılar progress bar gibidir. çok hareket ederler ama hiçbir yere gitmezler.
 
 if __name__ == "__main__":
     gereksiz_progress()
